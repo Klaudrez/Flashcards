@@ -1,0 +1,81 @@
+.navigator {
+  /* Posicionamiento fijo en la parte superior */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  
+  /* Flexbox para alinear elementos */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  /* Espaciado y dimensiones */
+  height: 70px;
+  padding: 0 2rem;
+  
+  /* Apariencia visual */
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  /* Tipografía */
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  
+  /* Efectos de texto */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.5px;
+}
+
+.navigator div {
+  /* Estilo para el texto "desks" */
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Efectos hover para interactividad */
+.navigator div:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .navigator {
+    height: 60px;
+    padding: 0 1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .navigator div {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Asegurar que el contenido no quede detrás del navbar fixed */
+body {
+  margin: 0;
+  padding-top: 70px; /* Mismo height que el navbar */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+}

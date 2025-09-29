@@ -1,0 +1,58 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Contenedor grid para los decks */
+.decks-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive - Móviles */
+@media (max-width: 768px) {
+  .decks-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .desk {
+    min-height: 160px;
+    padding: 1.2rem;
+  }
+  
+  .title-desk {
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablet - 2 columnas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .decks-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
