@@ -1,4 +1,4 @@
-.desk {
+.deck {
   /* Layout y dimensiones */
   width: 320px;
   min-height: 180px;
@@ -28,7 +28,7 @@
   overflow: hidden;
 }
 
-.desk::before {
+.deck::before {
   content: '';
   position: absolute;
   top: 0;
@@ -40,23 +40,23 @@
   transition: transform 0.3s ease;
 }
 
-.desk:hover::before {
+.deck:hover::before {
   transform: scaleX(1);
 }
 
-.desk:hover {
+.deck:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 
     0 20px 50px rgba(0, 0, 0, 0.18),
     0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-.desk:active {
+.deck:active {
   transform: translateY(-4px) scale(1.01);
 }
 
 /* Título destacado */
-.title-desk {
+.title-deck {
   font-size: 1.6rem;
   font-weight: 800;
   color: #1a202c;
@@ -78,7 +78,7 @@
 }
 
 /* Cantidad de cartas - Badge destacado */
-.cuantity-desk {
+.cuantity-deck {
   background: linear-gradient(135deg, #48bb78, #38a169);
   color: white;
   padding: 0.5rem 1rem;
@@ -137,14 +137,14 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .desk {
+  .deck {
     width: 100%;
     max-width: 280px;
     min-height: 160px;
     padding: 1.2rem;
   }
   
-  .title-desk {
+  .title-deck {
     font-size: 1.4rem;
   }
   
@@ -165,6 +165,6 @@
   100% { box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); }
 }
 
-.desk:hover {
+.deck:hover {
   animation: pulse-glow 2s infinite;
 }
