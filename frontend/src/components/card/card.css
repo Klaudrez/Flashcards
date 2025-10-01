@@ -1,0 +1,45 @@
+.card-container {
+    height: 200px;
+    width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: #f5f5f5;
+
+    border-radius: 6px;
+    
+}
+
+.phrase {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #666
+}
+
+.answer {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    
+    border-radius: 4px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    bottom: 0;
+    position:static;
+}
+button:hover {
+    background: #0056b3;
+}
