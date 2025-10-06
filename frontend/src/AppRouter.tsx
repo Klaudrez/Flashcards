@@ -8,7 +8,7 @@ import { Practice } from "./public/Practice";
     children: ReactNode
 } */
 
-export const AppRouter = () =>{/* ({children}:Props) =>{ */
+export const AppRouter = () =>{                         /* ({children}:Props) =>{ */
     return(
         <BrowserRouter>
             <Routes>

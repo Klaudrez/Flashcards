@@ -1,9 +1,16 @@
+export interface DeckBase{
+    deckID: number,
+    title: string,
+    cardsQuantity: number,
+    nativeLanguage: "English" | "Russian" | "Spanish" | "German",
+    learningLanguage: "English" | "Russian" | "Spanish" | "German"
 
+}
 
-export const decks = [
-        { deckID: 1, title: "Basic vocabulary", cards: 40, nativeLenguage: "English", learningLenguage:"Russian" },
-        { deckID: 2, title: "Game: The Forest", cards: 30, nativeLenguage: "English", learningLenguage:"Russian" },
-        { deckID: 3, title: "Places", cards: 30, nativeLenguage: "English", learningLenguage:"Russian" },
-        { deckID: 4, title: "Basic vocabulary", cards: 30, nativeLenguage: "English", learningLenguage:"German" },
-        { deckID: 5, title: "Verb Tenses", cards: 30, nativeLenguage: "English", learningLenguage:"German" },
+export const decks:DeckBase[] = [
+        { deckID: 1, title: "Basic vocabulary", cardsQuantity: 40, nativeLanguage: "English", learningLanguage:"Russian" },
+        { deckID: 2, title: "Game: The Forest", cardsQuantity: 30, nativeLanguage: "English", learningLanguage:"Russian" },
+        { deckID: 3, title: "Places", cardsQuantity: 30, nativeLanguage: "English", learningLanguage:"Russian" },
+        { deckID: 4, title: "Basic vocabulary", cardsQuantity: 30, nativeLanguage: "English", learningLanguage:"German" },
+        { deckID: 5, title: "Verb Tenses", cardsQuantity: 30, nativeLanguage: "English", learningLanguage:"German" },
     ];

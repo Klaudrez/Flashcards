@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom"
 
 interface Props{
     children : string,
-    cardsCuantity : number,
-    nativeLenguage : string,
-    learningLenguage : string,
+    cardsQuantity: number,
+    nativeLanguage: "English" | "Russian" | "Spanish" | "German",
+    learningLanguage: "English" | "Russian" | "Spanish" | "German"
     deckID : number,
 }
-export const Deck = ({children, cardsCuantity, nativeLenguage, learningLenguage, deckID}: Props) =>{
+export const Deck = ({children, cardsQuantity, nativeLanguage, learningLanguage, deckID}: Props) =>{
 
     const navigate = useNavigate();
           
@@ -21,10 +21,10 @@ export const Deck = ({children, cardsCuantity, nativeLenguage, learningLenguage,
             <p className="title-deck">
                 {children}
             </p>
-            <p className="cuantity-deck">{cardsCuantity}</p>
+            <p className="cuantity-deck">{cardsQuantity}</p>
              <div className="lenguage-container">
-                <p className="lenguage">{nativeLenguage}</p>
-                <p className="lenguage">{learningLenguage}</p>
+                <p className="lenguage">{nativeLanguage}</p>
+                <p className="lenguage">{learningLanguage}</p>
             </div>
         </div>
     )

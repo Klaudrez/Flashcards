@@ -2,14 +2,14 @@ import "./navigator.css"
 
 interface Props{
     children:  string;
-    onDesksClick?: () => void;
+    onDecksClick?: () => void;
 }
 
-export const Navbar = ({children, onDesksClick}:Props) =>{
+export const Navbar = ({children, onDecksClick}:Props) =>{
     return (
     <nav className="navigator">
         <h1 className='title'>{children}</h1>
-        <div onClick={onDesksClick} className="desks-button">
+        <div onClick={onDecksClick} className="decks-button">
                 desks
         </div>
     </nav>)
