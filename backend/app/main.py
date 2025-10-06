@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.api import decks_router
 
 app = FastAPI(
     title="Flashcards API",
@@ -42,29 +43,15 @@ flashcards_data = [
     }
 ]
 
-decks_data = [
-    {
-        "id": 1,
-        "name": "Vocabulario Básico",
-        "description": "Palabras esenciales en inglés",
-        "native_language": "Español",
-        "learning_language": "Inglés",
-        "card_count": 2
-    },
-    {
-        "id": 2,
-        "name": "Verb Tenses",
-        "description": "Diferentes tiempos verbales",
-        "native_language": "English",
-        "learning_language": "Spanish", 
-        "card_count": 0
-    }
-]
+app.include_router(decks_router, prefix="/decks", tags=["decks"])
+
+
+
 
 # Endpoint de prueba
 @app.get("/")
 async def root():
-    return decks_data
+    return {"FastAPI Running!"}
 
 @app.get("/health")
 async def health_check():
