@@ -26,15 +26,20 @@
   font-size: 1.8rem;
   font-weight: 700;
   color: white;
-  margin: 0;
+  margin: 0px;
+  padding: 15px;
   
   /* Efectos de texto */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   letter-spacing: -0.5px;
+  cursor: pointer;
 }
 
+
+
 .navigator div {
-  /* Estilo para el texto "desks" */
+  /* Estilo para el texto "decks" */
+  cursor: pointer;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
   font-size: 1.1rem;

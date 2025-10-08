@@ -1,7 +1,5 @@
-import { Navbar } from "../components/navigator/navigator"
 import { Deck } from "../components/deck/deck"
 import { useNavigate } from "react-router-dom"
-import type { DeckBase } from "../assets/Models/BDDFake"
 import { useFetch } from "../hooks/useFetch"
 import { adaptBackendDeckArray, type BackendDeck } from "../services/decksAdapters"
 
