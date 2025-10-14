@@ -1,5 +1,6 @@
-from sqlalchemy import Column, Integer, String, Text, Boolean, DateTime
+from sqlalchemy import Column, Integer, String, Text, Boolean, DateTime, ForeignKey
 from sqlalchemy.sql import func
+from sqlalchemy.orm import relationship
 
 from .base import Base
 
@@ -8,8 +9,8 @@ class Deck(Base):
     
     id = Column(Integer, primary_key=True, index=True)
 
-    native_language_id = Column(Integer, ForeignKey("language.id", ondelete="RESTRICT"), nullable=False)
-    foreign_language_id = Column(Integer, ForeignKey("language.id", ondelete="RESTRICT"), nullable=False)
+    native_language_id = Column(Integer, ForeignKey("languages.id", ondelete="RESTRICT"), nullable=False)
+    foreign_language_id = Column(Integer, ForeignKey("languages.id", ondelete="RESTRICT"), nullable=False)
 
 
     name = Column(String(255), nullable=False, index=True)
