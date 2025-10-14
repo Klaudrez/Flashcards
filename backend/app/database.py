@@ -4,6 +4,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
 from sqlalchemy.orm import sessionmaker
 
+from .models.base import Base
+from .models import deck, card 
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -25,3 +28,6 @@ engine = create_engine(connection_url)
 
 Session = sessionmaker(bind=engine)
 session = Session()
+
+
+Base.metadata.create_all(bind=engine)
